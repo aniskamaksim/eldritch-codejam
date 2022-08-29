@@ -13,8 +13,13 @@
 <body>
   <div class="wrapper">
     <header class="header">
-      <h1 class="header__title">Eldritch Horror</h1>
-      <h2 class="header__sub-title"></h2>
+        <ul>
+          <li>Step1: choose ancient</li> 
+          <li>Step2: choose level </li>
+          <li>Step3: click Shuffle</li> 
+          <li>Step4: click Get cards</li> 
+          <li>Step5: click card</li>
+        </ul>
     </header>
 
     <main class="main flex-container">
@@ -29,10 +34,6 @@
         <h2 class="main__difficulty-title"></h2>
         <div class="main__difficulty-buttons flex-container">
           <label class="main__difficulty-button">
-            <input type="radio" class = "difficult-radio" name="difficult-radio" value="simple">
-            Simple
-          </label>
-          <label class="main__difficulty-button">
             <input type="radio" class = "difficult-radio" name="difficult-radio" value="easy">
             Easy
           </label>
@@ -44,15 +45,11 @@
             <input type="radio" class = "difficult-radio" name="difficult-radio" value="hard">
             Hard
           </label>
-          <label class="main__difficulty-button">
-            <input type="radio" class = "difficult-radio" name="difficult-radio" value="hell">
-            The Hardest
-          </label>
         </div>
 
         <button class="restart">Shuffle cards</button>
       </div>
-      <button class="knead-container hider">Замешать колоду!</button>
+      <button class="knead-container hider">Get cards</button>
       <div class="main__game-field game-field flex-container">
         <div class="game-field__stages">
           <p class="game-field__stages-subtitle">First Stage</p>
