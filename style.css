@@ -111,7 +111,7 @@
     align-content: stretch;
     justify-content: flex-start;
 }
-  .main__difficulty-shuffle-cards {
+  .restart {
     padding: 18px 36px;
     background: #6bade6;
     border-radius: 50px;
@@ -119,7 +119,7 @@
     transition: 0.2s;
     transform: scale(1);
 }
-  .main__difficulty-shuffle-cards:hover {
+  .restart:hover {
     transform: scale(1.1);
   }
   .main__game-field {

@@ -19,32 +19,32 @@
 
     <main class="main flex-container">
       <div class="main__ancients flex-container">
-        <div class="main__ancient-card active" id="azathoth"></div>
-        <div class="main__ancient-card" id="cthulhu"></div>
-        <div class="main__ancient-card" id="iogSothoth"></div>
-        <div class="main__ancient-card" id="shubNiggurath"></div>
+        <div class="main__ancient-card ancient-radio active" id="azathoth"></div>
+        <div class="main__ancient-card ancient-radio" id="cthulhu"></div>
+        <div class="main__ancient-card ancient-radio" id="iogSothoth"></div>
+        <div class="main__ancient-card ancient-radio" id="shubNiggurath"></div>
       </div>
 
       <div class="main__difficulty flex-container">
         <h2 class="main__difficulty-title"></h2>
         <div class="main__difficulty-buttons flex-container">
           <label class="main__difficulty-button">
-            <input type="radio" name="difficulty" value="easy">
+            <input type="radio" class = "difficult-radio" name="difficult-radio" value="easy">
             Easy
           </label>
           <label class="main__difficulty-button">
-            <input type="radio" name="difficulty" value="normal" checked>
+            <input type="radio" class = "difficult-radio" name="difficult-radio" value="normal" checked>
             Normal
           </label>
           <label class="main__difficulty-button">
-            <input type="radio" name="difficulty" value="hard">
+            <input type="radio" class = "difficult-radio" name="difficult-radio" value="hard">
             Hard
           </label>
         </div>
 
-        <button class="main__difficulty-shuffle-cards">Shuffle cards</button>
+        <button class="restart">Shuffle cards</button>
       </div>
-
+      <button class="knead-container hider">Замешать колоду!</button>
       <div class="main__game-field game-field flex-container">
         <div class="game-field__stages">
           <p class="game-field__stages-subtitle">First Stage</p>
@@ -69,7 +69,10 @@
 
         <div class="game-field__cards flex-container">
           <div class="game-field__stack"></div>
-          <div class="game-field__active-card"></div>
+          
+          </div>
+          <div class="open-card-container">
+            <div class="open-card"></div>
         </div>
       </div>
     </main>
