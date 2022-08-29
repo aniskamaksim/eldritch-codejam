@@ -1,4 +1,10 @@
-import blueCardsAssets from '../../../assets/MythicCards/blue';
+//import blueCardsAssets from '../../../assets/MythicCards/blue';
+
+const blueCardsAssets = {}
+
+for (let index = 1; index < 13; index++) {
+  blueCardsAssets[`blue${index}`] = `url(../assets/MythicCards/blue/blue${index}.png)`;
+}
 
 const cardsData = [
   {

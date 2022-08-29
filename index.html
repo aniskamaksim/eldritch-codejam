@@ -1,32 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="theme-color" content="#000000">
-        <meta name="description" content="Web site created using create-react-app">
-        <title>Codejam Demon Shuffle</title>
-        <script defer="defer" src="shuffle.js"></script>
-        <link href="style.css" rel="stylesheet">
-    </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>CodeJam Eldritch Horror project</title>
+</head>
+
 <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"><div class="App" style = "background-image: url('home.png');">
-        <div class="ancients-container">
-            <div class="ancient-card active" style = "background-image: url('./assets/Ancients/Azathoth.png');"></div>
-            <div class="ancient-card" style = "background-image: url('./assets/Ancients/Cthulthu.png');"></div>
-            <div class="ancient-card" style = "background-image: url('./assets/Ancients/IogSothoth.png');"></div>
-            <div class="ancient-card " style = "background-image: url('./assets/Ancients/ShubNiggurath.png');"></div>
+  <div class="wrapper">
+    <header class="header">
+      <h1 class="header__title">Eldritch Horror</h1>
+      <h2 class="header__sub-title"></h2>
+    </header>
+
+    <main class="main flex-container">
+      <div class="main__ancients flex-container">
+        <div class="main__ancient-card active" id="azathoth"></div>
+        <div class="main__ancient-card" id="cthulhu"></div>
+        <div class="main__ancient-card" id="iogSothoth"></div>
+        <div class="main__ancient-card" id="shubNiggurath"></div>
+      </div>
+
+      <div class="main__difficulty flex-container">
+        <h2 class="main__difficulty-title"></h2>
+        <div class="main__difficulty-buttons flex-container">
+          <label class="main__difficulty-button">
+            <input type="radio" name="difficulty" value="easy">
+            Easy
+          </label>
+          <label class="main__difficulty-button">
+            <input type="radio" name="difficulty" value="normal" checked>
+            Normal
+          </label>
+          <label class="main__difficulty-button">
+            <input type="radio" name="difficulty" value="hard">
+            Hard
+          </label>
         </div>
-        <div class="difficulty-container">
-            <div class="difficulty ">Низкая</div>
-            <div class="difficulty active">Средняя</div>
-            <div class="difficulty ">Высокая</div>
+
+        <button class="main__difficulty-shuffle-cards">Shuffle cards</button>
+      </div>
+
+      <div class="main__game-field game-field flex-container">
+        <div class="game-field__stages">
+          <p class="game-field__stages-subtitle">First Stage</p>
+          <div class="game-field__stage game-field__stage_1 flex-container">
+            <div class="game-field__circle game-field__circle_green_1"></div>
+            <div class="game-field__circle game-field__circle_brown_1"></div>
+            <div class="game-field__circle game-field__circle_blue_1"></div>
+          </div>
+          <p class="game-field__stages-subtitle">Second Stage</p>
+          <div class="game-field__stage game-field__stage_2 flex-container">
+            <div class="game-field__circle game-field__circle_green_2"></div>
+            <div class="game-field__circle game-field__circle_brown_2"></div>
+            <div class="game-field__circle game-field__circle_blue_2"></div>
+          </div>
+          <p class="game-field__stages-subtitle">Third Stage</p>
+          <div class="game-field__stage game-field__stage_3 flex-container">
+            <div class="game-field__circle game-field__circle_green_3"></div>
+            <div class="game-field__circle game-field__circle_brown_3"></div>
+            <div class="game-field__circle game-field__circle_blue_3"></div>
+          </div>
         </div>
-        <div class="deck-container">
-            <span class="shuffle-button">Замешать колоду</span>
+
+        <div class="game-field__cards flex-container">
+          <div class="game-field__stack"></div>
+          <div class="game-field__active-card"></div>
         </div>
-    </div>
-</div>
+      </div>
+    </main>
+
+    <footer class="footer">
+    </footer>
+  </div>
+
+  <script src="./shuffle.js" type="module"></script>
+  <script src="./main.js" type="module"></script>
 </body>
 </html>
